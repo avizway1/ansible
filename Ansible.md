@@ -1,4 +1,4 @@
-**Install ansible in Control Node**
+**Install ansible in Control Node, As am using Amazon Linux2 OS, Amazon-linux-extras will install all required dependencies**
 
 ```bash
 amazon-linux-extras install ansible2 -y
