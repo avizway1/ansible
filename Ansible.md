@@ -34,6 +34,8 @@ passwd ansibleusr
 visudo
 ```
 
+Add below entry to sudeor file.
+
 ```bash
 ansibleusr ALL=(ALL) NOPASSWD: ALL
 ```
