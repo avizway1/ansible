@@ -1,0 +1,15 @@
+---
+- name: handler example 2
+  hosts: all
+  become: true
+  tasks:
+    - name: copy the code
+      copy: 
+        src: /home/ansibleusr/index.html
+        dest: /var/www/html/
+      notify: restart apache
+  handlers:
+    - name: restart apache
+      service: 
+        name: httpd
+        state: restarted

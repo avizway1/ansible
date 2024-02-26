@@ -1,0 +1,11 @@
+---
+- name: Installing httpd as phase2
+  yum:
+    name: httpd
+    state: installed
+  notify: start httpd service
+
+- name: copy index.html to /var/www/html/ path
+  copy:
+    src: "index.html"
+    dest: "{{ index_html_dest }}"

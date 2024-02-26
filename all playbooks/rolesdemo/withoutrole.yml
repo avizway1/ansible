@@ -1,0 +1,19 @@
+---
+- name: Without roles, a regular playbook
+  hosts: localhost
+  become: true
+  tasks: 
+    - name: Install httpd 
+      yum: 
+        name: httpd
+        state: installed
+
+    - name: Install git
+      yum:
+        name: git
+        state: installed
+
+    - name: Install docker
+      yum:
+        name: docker
+        state: installed 

@@ -1,0 +1,17 @@
+---
+- name: understanding varibales
+  hosts: all
+  become: true
+  vars: 
+    a: docker
+    b: mysql
+  tasks: 
+    - name: install any package with the help of var
+      yum: 
+        name: "{{ a }}"
+        state: removed
+
+    - name: install any package with the help of var
+      yum:
+        name: "{{ b }}"
+        state: installed

@@ -1,0 +1,6 @@
+---
+- name: Install apache as phase 2
+  hosts: localhost
+  become: true
+  roles:
+    - phase2

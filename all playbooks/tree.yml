@@ -1,0 +1,9 @@
+---
+- name: Install tree package on all nodes
+  hosts: all
+  become: true
+  tasks:
+    - name: install tree package
+      yum:
+        name: tree
+        state: removed

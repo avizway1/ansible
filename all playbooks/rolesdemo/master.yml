@@ -1,0 +1,6 @@
+---
+- name: master playbook
+  hosts: localhost
+  become: true
+  roles: 
+    - httpd-role

@@ -1,0 +1,14 @@
+---
+- name: Example Loop in Ansible
+  hosts: localhost
+  vars:
+    fruits:
+      - apple
+      - banana
+      - orange
+  tasks:
+    - name: Display Fruits
+      debug:
+        msg: "I like {{ item }}"
+      loop: "{{ fruits }}"
+

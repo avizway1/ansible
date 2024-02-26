@@ -1,0 +1,5 @@
+---
+- name: Install httpd using role
+  yum:
+    name: httpd
+    state: installed

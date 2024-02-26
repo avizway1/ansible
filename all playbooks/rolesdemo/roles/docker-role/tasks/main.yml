@@ -1,0 +1,5 @@
+---
+- name: install docker
+  yum:
+    name: docker
+    state: installed

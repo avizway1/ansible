@@ -1,0 +1,22 @@
+---
+- name: install tree package
+  hosts: all
+  become: true
+  tasks:
+    - name: Install tree
+      yum: 
+        name: tree
+        state: present
+      tags: tree
+
+    - name: Install git
+      yum: 
+        name: git
+        state: present
+      tags: git
+
+    - name: Install docker
+      yum: 
+        name: docker
+        state: present
+      tags: docker

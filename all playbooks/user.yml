@@ -1,0 +1,14 @@
+---
+- name: create a user named avinash
+  hosts: all
+  become: true
+
+  tasks:
+    - name: create user
+      user:
+        name: avinash
+        state: present
+    - name: add user to group
+      user:
+        name: avinash
+        groups: wheel
